@@ -1,0 +1,30 @@
+export default function Form(props) {
+  return (
+    <>
+      <label>
+        Name:{""}
+        <input
+          type="text"
+          value={props.name}
+          onChange={props.person.handleName}
+        />
+      </label>
+      <label>
+        Email:{""}
+        <input
+          type="text"
+          value={props.email}
+          onChange={props.person.handleEmail}
+        />
+      </label>
+      <label>
+        Phone:{""}
+        <input
+          type="text"
+          value={props.phone}
+          onChange={props.person.handlePhone}
+        />
+      </label>
+    </>
+  );
+}
