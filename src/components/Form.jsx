@@ -25,6 +25,40 @@ export default function Form(props) {
           onChange={props.person.handlePhone}
         />
       </label>
+      <Education
+        school={props.person.school}
+        study={props.person.study}
+        dateOfStudy={props.person.dateOfStudy}
+        handleSchool={props.person.handleSchool}
+        handleStudy={props.person.handleStudy}
+        handleDateOfStudy={props.person.handleDateOfStudy}
+      />
+    </>
+  );
+}
+
+function Education({
+  school,
+  handleSchool,
+  study,
+  handleStudy,
+  dateOfStudy,
+  handleDateOfStudy,
+}) {
+  return (
+    <>
+      <label>
+        Educational institution:{""}
+        <input type="text" value={school} onChange={handleSchool} />
+      </label>
+      <label>
+        Study:{""}
+        <input type="text" value={study} onChange={handleStudy} />
+      </label>
+      <label>
+        End date:{""}
+        <input type="date" value={dateOfStudy} onChange={handleDateOfStudy} />
+      </label>
     </>
   );
 }
