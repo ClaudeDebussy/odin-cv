@@ -24,7 +24,7 @@ function IdentityForm(props) {
         <input
           type="tel"
           id="phone"
-          placeholder="+1 323-122-4567"
+          placeholder="323-122-4567"
           name="phone"
           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
           value={props.identity.phone}
