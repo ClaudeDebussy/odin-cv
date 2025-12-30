@@ -1,7 +1,7 @@
 function IdentityForm(props) {
   return (
     <>
-      <form onSubmit={props.onSubmit}>
+      <form className="identity-form" onSubmit={props.onSubmit}>
         <label htmlFor="name">Full name: </label>
         <input
           type="text"

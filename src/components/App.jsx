@@ -1,6 +1,7 @@
 import { useState } from "react";
 import IdentityForm from "./IdentityForm";
 import EducationForm from "./EducationForm";
+import WorkForm from "./WorkForm";
 
 function App() {
   //IDENTITY
@@ -26,7 +27,7 @@ function App() {
 
   const handleEducationChange = (event) => {
     const { name, value } = event.target;
-    setEducationFormData((f) => ({ ...f, [name]: value }));
+    setEducationFormData((e) => ({ ...e, [name]: value }));
   };
 
   const handleEducationSubmit = (event) => {
@@ -38,10 +39,33 @@ function App() {
   };
 
   //WORK
-  const [workFormData, setWorkFormData] = useState([
-    { company: "", position: "", description: "", startYear: "", endYear: "" },
-  ]);
+  const [workFormData, setWorkFormData] = useState({
+    company: "",
+    position: "",
+    description: "",
+    startYear: "",
+    endYear: "",
+  });
   const [workList, setWorkList] = useState([]);
+
+  const handleWorkChange = (event) => {
+    const { name, value } = event.target;
+    setWorkFormData((w) => ({ ...w, [name]: value }));
+  };
+
+  const handleWorkSubmit = (event) => {
+    event.preventDefault();
+    const newWork = { ...workFormData, id: crypto.randomUUID() };
+    setWorkList((w) => [...w, newWork]);
+    setWorkFormData({
+      company: "",
+      position: "",
+      description: "",
+      startYear: "",
+      endYear: "",
+    });
+    console.log("Form submitted with data:", workFormData);
+  };
 
   return (
     <>
@@ -54,6 +78,11 @@ function App() {
         education={educationFormData}
         onChange={handleEducationChange}
         onSubmit={handleEducationSubmit}
+      />
+      <WorkForm
+        work={workFormData}
+        onChange={handleWorkChange}
+        onSubmit={handleWorkSubmit}
       />
     </>
   );

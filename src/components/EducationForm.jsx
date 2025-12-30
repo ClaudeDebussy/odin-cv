@@ -1,7 +1,7 @@
 function EducationForm(props) {
   return (
     <>
-      <form onSubmit={props.onSubmit}>
+      <form className="education-form" onSubmit={props.onSubmit}>
         <label htmlFor="place">Place of Study: </label>
         <input
           type="text"
@@ -22,7 +22,7 @@ function EducationForm(props) {
         />
         <label htmlFor="year">Year of Completion: </label>
         <input
-          type="text"
+          type="number"
           id="year"
           placeholder={new Date().getFullYear()}
           name="year"
