@@ -37,7 +37,7 @@ function WorkForm(props) {
           value={props.work.startYear}
           onChange={props.onChange}
         />
-        <label htmlFor="endYear">Start year: </label>
+        <label htmlFor="endYear">End year: </label>
         <input
           type="number"
           id="endYear"

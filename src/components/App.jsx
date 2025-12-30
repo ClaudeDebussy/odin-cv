@@ -2,6 +2,7 @@ import { useState } from "react";
 import IdentityForm from "./IdentityForm";
 import EducationForm from "./EducationForm";
 import WorkForm from "./WorkForm";
+import CV from "./CV";
 
 function App() {
   //IDENTITY
@@ -84,6 +85,7 @@ function App() {
         onChange={handleWorkChange}
         onSubmit={handleWorkSubmit}
       />
+      <CV identity={identity} education={educationList} work={workList} />
     </>
   );
 }
