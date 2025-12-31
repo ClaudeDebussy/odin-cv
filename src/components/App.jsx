@@ -13,11 +13,6 @@ function App() {
     setIdentity((i) => ({ ...i, [name]: value }));
   };
 
-  const handleIdentitySubmit = (event) => {
-    event.preventDefault();
-    console.log("Form submitted with data:", identity);
-  };
-
   //EDUCATION
   const [educationFormData, setEducationFormData] = useState({
     place: "",
@@ -70,21 +65,19 @@ function App() {
 
   return (
     <>
-      <IdentityForm
-        identity={identity}
-        onChange={handleIdentityChange}
-        onSubmit={handleIdentitySubmit}
-      />
-      <EducationForm
-        education={educationFormData}
-        onChange={handleEducationChange}
-        onSubmit={handleEducationSubmit}
-      />
-      <WorkForm
-        work={workFormData}
-        onChange={handleWorkChange}
-        onSubmit={handleWorkSubmit}
-      />
+      <div className="forms-container">
+        <IdentityForm identity={identity} onChange={handleIdentityChange} />
+        <EducationForm
+          education={educationFormData}
+          onChange={handleEducationChange}
+          onSubmit={handleEducationSubmit}
+        />
+        <WorkForm
+          work={workFormData}
+          onChange={handleWorkChange}
+          onSubmit={handleWorkSubmit}
+        />
+      </div>
       <CV identity={identity} education={educationList} work={workList} />
     </>
   );

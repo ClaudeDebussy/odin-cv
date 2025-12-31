@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.forms-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.identity-form,
+.education-form,
+.work-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.forms-container label {
+  color: hsl(0, 0%, 20%);
+}
+
+.forms-container input,
+.forms-container textarea {
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  color: hsl(0, 0%, 0%);
+  border: 2px solid hsl(0, 0%, 65%);
+}
+
+.forms-container input::placeholder,
+.forms-container textarea::placeholder {
+  color: hsl(0, 0%, 62%);
+}
+
+.forms-container button {
+  font-size: 1.5rem;
+  align-self: center;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(83, 61, 250);
+  padding: 0.5rem 1rem;
+  margin-top: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.form-field-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.start-year-end-year {
+  display: flex;
+  flex: 1;
+  max-width: 100%;
+  gap: 1rem;
+}
+
+.start-year-end-year .form-field-vertical {
+  flex: 1;
+  min-width: 0;
+}
+
+.start-year-end-year input {
+  width: auto;
+}
