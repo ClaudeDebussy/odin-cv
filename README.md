@@ -1,16 +1,16 @@
 # React CV Application
 
-A dynamic CV builder built with **React** that allows users to input personal details, educational background, and professional experience in real-time. This project demonstrates core frontend engineering principles, including state management, component composition, and responsive design.
+A simple CV builder built with **React** that allows users to input personal details, educational background, and professional experience and see the resume update in real-time. This project was developed to help learn React and solidify core frontend engineering principles, including state management, component composition, and responsive design.
 
-## 🚀 Key Features
+## Key Features
 
-- **Live Preview:** Real-time rendering of CV content as the user types.
+- **Live Preview:** Real-time rendering of CV content as the user types and submits forms.
 - **Dynamic List Management:** Add multiple entries for education and work experience using unique ID generation.
-- **Conditional Rendering:** Intelligently hides/shows sections (like "Experience" or "Education") only when data is present.
+- **Conditional Rendering:** Intelligently hides/shows resume sections (like "Experience" or "Education") only when data is present.
 - **Form Persistence:** Managed state ensures user input is captured and cleared efficiently upon submission.
-- **Responsive UI:** Fully responsive layout built with a modern CSS reset and flexbox/grid.
+- **Responsive UI:** Fully responsive layout built with a modern CSS reset and flexbox.
 
-## 🛠️ Technical Stack & Implementation
+## Technical Stack & Implementation
 
 ### Core Concepts
 
@@ -25,7 +25,7 @@ A dynamic CV builder built with **React** that allows users to input personal de
 - **`CV.jsx`**: A "dumb" presentational component that receives props and renders a polished document.
 - **Modular Forms**: Separate components (`IdentityForm`, `EducationForm`, `WorkForm`) handle specific data logic, promoting reusability and clean code.
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 src/
@@ -42,10 +42,8 @@ src/
 └── main.jsx              # Entry point
 ```
 
-## 🏗️ Future Roadmap
+## Future Roadmap
 
 - [ ] Implement a "Print to PDF" feature using react-to-print.
 
 - [ ] Add an "Edit" mode for existing list items.
-
-- [ ] Incorporate Drag-and-Drop for reordering experience sections.
