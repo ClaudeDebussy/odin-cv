@@ -1,10 +1,18 @@
 import { useState } from "react";
+import ShowForms from "./ShowForms";
 import IdentityForm from "./IdentityForm";
 import EducationForm from "./EducationForm";
 import WorkForm from "./WorkForm";
 import CV from "./CV";
 
 function App() {
+  // Toggle FORMS
+  const [showForms, setShowForms] = useState(true);
+
+  const toggleForms = () => {
+    setShowForms(!showForms);
+  };
+
   //IDENTITY
   const [identity, setIdentity] = useState({ name: "", email: "", phone: "" });
   const [hasName, setHasName] = useState(false);
@@ -81,19 +89,24 @@ function App() {
 
   return (
     <>
-      <div className="forms-container">
-        <IdentityForm identity={identity} onChange={handleIdentityChange} />
-        <EducationForm
-          education={educationFormData}
-          onChange={handleEducationChange}
-          onSubmit={handleEducationSubmit}
-        />
-        <WorkForm
-          work={workFormData}
-          onChange={handleWorkChange}
-          onSubmit={handleWorkSubmit}
-        />
-      </div>
+      <ShowForms toggleForms={toggleForms} />
+      {showForms && (
+        <>
+          <div className="forms-container">
+            <IdentityForm identity={identity} onChange={handleIdentityChange} />
+            <EducationForm
+              education={educationFormData}
+              onChange={handleEducationChange}
+              onSubmit={handleEducationSubmit}
+            />
+            <WorkForm
+              work={workFormData}
+              onChange={handleWorkChange}
+              onSubmit={handleWorkSubmit}
+            />
+          </div>
+        </>
+      )}
       <CV
         identity={identity}
         hasName={hasName}
