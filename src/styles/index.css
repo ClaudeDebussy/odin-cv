@@ -71,13 +71,17 @@ body {
 
 .cv {
   padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.cv h1 {
+.cv-header h1 {
   text-align: center;
+  font-size: 8vw;
 }
 
-.cv-header {
+.cv-phone-email {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

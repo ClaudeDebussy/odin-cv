@@ -1,19 +1,21 @@
 function CV(props) {
   return (
     <div className="cv">
-      {props.hasName && (
-        <>
-          <h1>{props.identity.name}</h1>
-          <hr />
-        </>
-      )}
       <div className="cv-header">
-        {props.hasPhone && <span>P: {props.identity.phone}</span>}
-        {props.hasEmail && <span>E: {props.identity.email}</span>}
+        {props.hasName && (
+          <>
+            <h1>{props.identity.name}</h1>
+            <hr />
+          </>
+        )}
+        <div className="cv-phone-email">
+          {props.hasPhone && <span>P: {props.identity.phone}</span>}
+          {props.hasEmail && <span>E: {props.identity.email}</span>}
+        </div>
       </div>
 
       {props.education.length > 0 && (
-        <>
+        <div className="cv-education">
           <h2>Education: </h2>
           <ul>
             {props.education.map((school) => (
@@ -24,11 +26,11 @@ function CV(props) {
               </li>
             ))}
           </ul>
-        </>
+        </div>
       )}
 
       {props.work.length > 0 && (
-        <>
+        <div className="cv-work">
           <h2>Experience: </h2>
           <ul>
             {props.work.map((job) => (
@@ -45,7 +47,7 @@ function CV(props) {
               </li>
             ))}
           </ul>
-        </>
+        </div>
       )}
     </div>
   );
