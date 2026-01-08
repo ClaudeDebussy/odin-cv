@@ -2,6 +2,7 @@ function IdentityForm(props) {
   return (
     <>
       <form className="identity-form">
+        <h2>About you:</h2>
         <div className="form-field-vertical">
           <label htmlFor="name">Full name: </label>
           <input

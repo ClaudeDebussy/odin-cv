@@ -25,7 +25,7 @@ function WorkForm(props) {
             onChange={props.onChange}
           />
         </div>
-        <div className="form-field-vertical">
+        <div className="form-field-vertical job-description">
           <label htmlFor="description">Description of duties: </label>
           <textarea
             id="description"
@@ -59,7 +59,7 @@ function WorkForm(props) {
             />
           </div>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Add work experience</button>
       </form>
     </>
   );
