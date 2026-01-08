@@ -54,6 +54,11 @@ body {
   color: white;
 }
 
+.forms-container button:hover {
+  background-color: rgba(83, 61, 250, 0.72);
+  cursor: pointer;
+}
+
 .form-field-vertical {
   display: flex;
   flex-direction: column;
@@ -170,9 +175,6 @@ body {
 @media (min-width: 1024px) {
   .forms-container {
     padding: 2rem 25%;
-  }
-
-  .forms-container button {
   }
 
   .cv {
