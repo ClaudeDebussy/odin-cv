@@ -49,7 +49,6 @@ function App() {
     const newEducation = { ...educationFormData, id: crypto.randomUUID() };
     setEducationList((e) => [...e, newEducation]);
     setEducationFormData({ place: "", study: "", year: "" });
-    console.log("Form submitted with data:", educationFormData);
   };
 
   //WORK
@@ -78,7 +77,6 @@ function App() {
       startYear: "",
       endYear: "",
     });
-    console.log("Form submitted with data:", workFormData);
   };
 
   return (

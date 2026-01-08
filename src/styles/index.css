@@ -68,3 +68,17 @@ body {
 .start-year-end-year input {
   width: auto;
 }
+
+.cv {
+  padding: 0px 20px;
+}
+
+.cv h1 {
+  text-align: center;
+}
+
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
