@@ -16,13 +16,15 @@ function CV(props) {
 
       {props.education.length > 0 && (
         <div className="cv-education">
-          <h2>Education: </h2>
+          <h2>Education </h2>
           <ul>
             {props.education.map((school) => (
               <li key={school.id}>
-                <span className="school">{school.place}</span>
+                <div>
+                  <span className="school">{school.place}</span>
+                  <span className="year">{school.year}</span>
+                </div>
                 <span className="study">{school.study}</span>
-                <span className="year">{school.year}</span>
               </li>
             ))}
           </ul>
@@ -31,7 +33,7 @@ function CV(props) {
 
       {props.work.length > 0 && (
         <div className="cv-work">
-          <h2>Experience: </h2>
+          <h2>Experience </h2>
           <ul>
             {props.work.map((job) => (
               <li key={job.id}>
