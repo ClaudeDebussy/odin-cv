@@ -37,15 +37,14 @@ function CV(props) {
           <ul>
             {props.work.map((job) => (
               <li key={job.id}>
-                <div className="job-left-column">
-                  <span className="job-start-year">{job.startYear}</span>
-                  <span className="job-end-year">{job.endYear}</span>
-                </div>
-                <div className="job-right-column">
+                <div>
                   <span className="position">{job.position}</span>
-                  <span className="company">{job.company}</span>
-                  <span className="description">{job.description}</span>
+                  <span className="year">
+                    {job.startYear}-{job.endYear}
+                  </span>
                 </div>
+                <span className="company">{job.company}</span>
+                <span className="description">{job.description}</span>
               </li>
             ))}
           </ul>

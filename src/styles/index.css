@@ -73,12 +73,12 @@ body {
   padding: 0px 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .cv h2 {
   font-size: 24px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .cv ul {
@@ -98,27 +98,34 @@ body {
   flex-wrap: wrap;
 }
 
-.cv-education ul li {
+.cv-education ul li,
+.cv-work ul li {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
   font-size: 20px;
 }
 
-.cv-education ul li .school {
+.cv-education ul li div,
+.cv-work ul li div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cv-education ul li .school,
+.cv-work ul li .position {
   font-size: 24px;
   margin-bottom: 0px;
   line-height: normal;
 }
 .cv-education ul li .study,
-.cv-education ul li .year {
+.cv-education ul li .year,
+.cv-work ul li .company,
+.cv-work ul li .year {
   color: hsla(0, 0%, 0%, 0.863);
 }
 
-.cv-education ul li div {
-  display: flex;
-  justify-content: space-between;
-}
-
-.cv-education .school {
+.cv-work .description {
+  margin-left: 20px;
 }
