@@ -1,11 +1,15 @@
 function CV(props) {
   return (
     <div className="cv">
-      <h1>{props.identity.name}</h1>
-      <hr />
+      {props.hasName && (
+        <>
+          <h1>{props.identity.name}</h1>
+          <hr />
+        </>
+      )}
       <div className="cv-header">
-        <span>P: {props.identity.phone}</span>
-        <span>E: {props.identity.email}</span>
+        {props.hasPhone && <span>P: {props.identity.phone}</span>}
+        {props.hasEmail && <span>E: {props.identity.email}</span>}
       </div>
 
       <h2>Education: </h2>

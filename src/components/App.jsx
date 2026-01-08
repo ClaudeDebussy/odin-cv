@@ -7,10 +7,28 @@ import CV from "./CV";
 function App() {
   //IDENTITY
   const [identity, setIdentity] = useState({ name: "", email: "", phone: "" });
+  const [hasName, setHasName] = useState(false);
+  const [hasPhone, setHasPhone] = useState(false);
+  const [hasEmail, setHasEmail] = useState(false);
 
   const handleIdentityChange = (event) => {
     const { name, value } = event.target;
     setIdentity((i) => ({ ...i, [name]: value }));
+    if (identity.name) {
+      setHasName(true);
+    } else {
+      setHasName(false);
+    }
+    if (identity.phone) {
+      setHasPhone(true);
+    } else {
+      setHasPhone(false);
+    }
+    if (identity.email) {
+      setHasEmail(true);
+    } else {
+      setHasEmail(false);
+    }
   };
 
   //EDUCATION
@@ -78,7 +96,14 @@ function App() {
           onSubmit={handleWorkSubmit}
         />
       </div>
-      <CV identity={identity} education={educationList} work={workList} />
+      <CV
+        identity={identity}
+        hasName={hasName}
+        hasPhone={hasPhone}
+        hasEmail={hasEmail}
+        education={educationList}
+        work={workList}
+      />
     </>
   );
 }
